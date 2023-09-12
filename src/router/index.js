@@ -14,7 +14,7 @@ const routes = [
   {
     path: '/info',
     name: 'info',
-    component: () => import('../views/argument/indexView.vue')
+    component: () => import('../views/argument/infoView.vue')
   },
   {
     path: '/noopsyche',

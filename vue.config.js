@@ -4,6 +4,7 @@ const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
 const ElementPlus = require('unplugin-element-plus/webpack')
 const Icons =require('unplugin-icons/webpack')
 const IconsResolver =require('unplugin-icons/resolver')
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 
 module.exports = {
   lintOnSave: false, // 关闭语法检查
@@ -29,6 +30,7 @@ module.exports = {
       Icons({
         autoInstall: true,
       }),
+      new NodePolyfillPlugin()
     ],
   },
   devServer: {
@@ -41,5 +43,5 @@ module.exports = {
           }
       }
     }
-  }
+  },
 }
